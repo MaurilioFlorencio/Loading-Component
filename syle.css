@@ -10,7 +10,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 .circulos{
@@ -37,11 +36,55 @@ main{
     animation-name: bola2;
 }
 
-@keyframe bola1{
-
+@keyframes bola1{
+    0%{
+        left: 25px;
+        transform: scale(1);
+        z-index: 1;
+    }
+    25%{
+        left: 100px;
+        transform: scale(0.66);
+    }
+    50%{
+        left: 25px;
+        transform: scale(0.33);
+        z-index: 0;
+    }
+    75%{
+        left: -50px;
+        transform: scale(0.66);
+    }
+    100%{
+        left: 25px;
+        transform: scale(1);
+        z-index: 1;
+    }
 }
 
-@keyframe bola2{
-
+@keyframes bola2{
+    0%{
+        left: -25px;
+        transform: scale(0.33);
+        z-index: 0;
+    }
+    25%{
+        left: -100px;
+        transform: scale(0.66);
+    }
+    50%{
+        left: -25px;
+        transform: scale(1);
+        z-index: 1;
+    }
+    75%{
+        left: 50px;
+        transform: scale(0.66);
+    }
+    100%{
+        left: -25px;
+        transform: scale(0.33);
+        z-index: 0;
+    }
 }
 
